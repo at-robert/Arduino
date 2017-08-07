@@ -41,10 +41,10 @@ void callback(uint8_t device_id, const char * device_name, bool state) {
   Serial.print("Device "); Serial.print(device_name); 
   Serial.print(" state: ");
   if (state) {
-    Serial.println("ON");
+    Serial.println("ON xx");
     digitalWrite(GPIO5_ID, HIGH);
   } else {
-    Serial.println("OFF");
+    Serial.println("OFF x");
     digitalWrite(GPIO5_ID, LOW);
   }
 }
