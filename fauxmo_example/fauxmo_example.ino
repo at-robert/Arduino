@@ -1,9 +1,8 @@
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include "fauxmoESP.h"
+#include "credential.h"
 
-#define WIFI_SSID "..."
-#define WIFI_PASS "..."
 #define SERIAL_BAUDRATE                 115200
 #define GPIO5_ID 1
 
