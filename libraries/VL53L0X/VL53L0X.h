@@ -127,6 +127,8 @@ class VL53L0X
     uint16_t readRangeContinuousMillimeters(void);
     uint16_t readRangeSingleMillimeters(void);
 
+    uint8_t readRangeStatus(void);
+
     inline void setTimeout(uint16_t timeout) { io_timeout = timeout; }
     inline uint16_t getTimeout(void) { return io_timeout; }
     bool timeoutOccurred(void);
@@ -153,6 +155,7 @@ class VL53L0X
     uint16_t io_timeout;
     bool did_timeout;
     uint16_t timeout_start_ms;
+    uint8_t range_status;
 
     uint8_t stop_variable; // read by init and used when starting measurement; is StopVariable field of VL53L0X_DevData_t structure in API
     uint32_t measurement_timing_budget_us;

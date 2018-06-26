@@ -20,16 +20,25 @@ void setup()
   sensor.init();
   sensor.setTimeout(500);
 
+    // increase timing budget to 200 ms
+  sensor.setMeasurementTimingBudget(200000); 
+
   // Start continuous back-to-back mode (take readings as
   // fast as possible).  To use continuous timed mode
   // instead, provide a desired inter-measurement period in
   // ms (e.g. sensor.startContinuous(100)).
   sensor.startContinuous();
+
+
 }
 
 void loop()
 {
   static int i = 0;
+
+  // Serial.print("Range Status = ");
+  // Serial.print(sensor.readRangeStatus());
+  // Serial.println();
 
   Serial.print("The TOF distance = ");
   Serial.print(sensor.readRangeContinuousMillimeters());

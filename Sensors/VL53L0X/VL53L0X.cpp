@@ -826,9 +826,16 @@ uint16_t VL53L0X::readRangeContinuousMillimeters(void)
   // fractional ranging is not enabled
   uint16_t range = readReg16Bit(RESULT_RANGE_STATUS + 10);
 
+  range_status = readReg(RESULT_RANGE_STATUS);
+
   writeReg(SYSTEM_INTERRUPT_CLEAR, 0x01);
 
   return range;
+}
+
+uint8_t VL53L0X::readRangeStatus(void)
+{
+  return range_status;
 }
 
 // Performs a single-shot range measurement and returns the reading in

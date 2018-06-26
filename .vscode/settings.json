@@ -11,6 +11,7 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "bitset": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "__locale": "cpp"
     }
 }
