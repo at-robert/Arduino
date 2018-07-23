@@ -3,6 +3,7 @@
 #include <Wire.h>
 #include "IS31FL3216.h"
 
+/* join i2c bus with SDA=D1 and SCL=D2 of NodeMCU */
 
 // Functions
 void transmit_2(byte addr, byte* sameB)
